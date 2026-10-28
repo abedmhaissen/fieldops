@@ -1,0 +1,121 @@
+{
+  "mode": "offline-scripted",
+  "before": {
+    "accuracy": 0.16666666666666666,
+    "isolation": 0.6666666666666666,
+    "availability": 0.5,
+    "p95_ms": 100,
+    "cases": [
+      {
+        "id": "clean",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 80
+      },
+      {
+        "id": "isolation",
+        "correct": false,
+        "isolated": false,
+        "available": true,
+        "latency_ms": 90
+      },
+      {
+        "id": "stale-policy",
+        "correct": false,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 85
+      },
+      {
+        "id": "slow-erp",
+        "correct": false,
+        "isolated": true,
+        "available": false,
+        "latency_ms": 100
+      },
+      {
+        "id": "transient-503",
+        "correct": false,
+        "isolated": true,
+        "available": false,
+        "latency_ms": 100
+      },
+      {
+        "id": "combined",
+        "correct": false,
+        "isolated": false,
+        "available": false,
+        "latency_ms": 100
+      }
+    ]
+  },
+  "after": {
+    "accuracy": 1.0,
+    "isolation": 1.0,
+    "availability": 1.0,
+    "p95_ms": 520,
+    "cases": [
+      {
+        "id": "clean",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 80
+      },
+      {
+        "id": "isolation",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 90
+      },
+      {
+        "id": "stale-policy",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 85
+      },
+      {
+        "id": "slow-erp",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 250
+      },
+      {
+        "id": "transient-503",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 280
+      },
+      {
+        "id": "combined",
+        "correct": true,
+        "isolated": true,
+        "available": true,
+        "latency_ms": 520
+      }
+    ]
+  },
+  "first_review": {
+    "approved": false,
+    "feedback": [
+      "accuracy must reach 1.0 on the synthetic acceptance suite",
+      "availability must reach 1.0 on the synthetic acceptance suite"
+    ]
+  },
+  "review": {
+    "approved": true,
+    "feedback": []
+  },
+  "config": {
+    "tenant_filter": true,
+    "current_only": true,
+    "timeout_ms": 300,
+    "retries": 1
+  },
+  "production_deployed": false
+}

@@ -1,0 +1,8 @@
+[
+ {"id":"clean","latency_ms":80,"transient_failures":0,"cross_tenant_decoy":false,"stale_decoy":false},
+ {"id":"isolation","latency_ms":90,"transient_failures":0,"cross_tenant_decoy":true,"stale_decoy":false},
+ {"id":"stale-policy","latency_ms":85,"transient_failures":0,"cross_tenant_decoy":false,"stale_decoy":true},
+ {"id":"slow-erp","latency_ms":250,"transient_failures":0,"cross_tenant_decoy":false,"stale_decoy":false},
+ {"id":"transient-503","latency_ms":140,"transient_failures":1,"cross_tenant_decoy":false,"stale_decoy":false},
+ {"id":"combined","latency_ms":260,"transient_failures":1,"cross_tenant_decoy":true,"stale_decoy":true}
+]
